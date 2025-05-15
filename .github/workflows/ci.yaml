@@ -28,4 +28,4 @@ jobs:
         if: always()
         with:
           files: |
-            **/test/**/*.xml
+            bazel-testlogs/**/test.xml
