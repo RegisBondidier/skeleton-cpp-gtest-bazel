@@ -38,4 +38,4 @@ jobs:
         if: always()
         with:
           files: |
-            bazel-testlogs/**/test.xml
+            /home/runner/.bazel/**/testlogs/**/test.xml
