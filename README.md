@@ -10,14 +10,13 @@ As an alternative, if you already have Visual Studio Code and Docker installed y
 ## Build 
 To build the executable:
 ```Bash
-bazel build //src:main
+bazel build ...
 ```
 
 ## Run
-The path to the executable is the executable bazel-bin/src/main
-To run the executable:
+To run the generated executable:
 ```Bash
-main 
+./bazel-bin/src/project1
 ``` 
 
 ## Tests
