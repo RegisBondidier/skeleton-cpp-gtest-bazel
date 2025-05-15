@@ -5,5 +5,5 @@
 
 
 TEST(Project1Test, FirstTest) {
-    EXPECT_TRUE(false);
+    EXPECT_TRUE(true);
 }

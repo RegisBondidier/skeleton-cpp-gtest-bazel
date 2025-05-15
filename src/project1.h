@@ -1,5 +1,5 @@
-#ifndef PROEJECT1_H
-#define PROEJECT1_H
+#ifndef PROJECT1_HPP
+#define PROJECT1_HPP
 
 #include <fstream>
 #include <vector>
@@ -16,3 +16,5 @@ public:
 private:
 
 };
+
+#endif // PROJECT1_HPP
