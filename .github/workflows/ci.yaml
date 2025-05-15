@@ -23,6 +23,9 @@ jobs:
       - name: Run all tests
         run: bazel test //... --test_output=errors
 
+      - name: Understand path in github actions
+        run: pwd && ls -lR
+
       - name: Publish Test Results
         uses: EnricoMi/publish-unit-test-result-action@v2
         if: always()
