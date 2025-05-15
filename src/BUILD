@@ -1,7 +1,7 @@
 cc_library (
     name = "libproject1",
     srcs = ["project1.cpp"],
-    hdrs = ["project1.hpp"],
+    hdrs = ["project1.h"],
     visibility = ["//visibility:public"],
 )
 

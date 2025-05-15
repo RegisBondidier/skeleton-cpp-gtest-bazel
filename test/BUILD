@@ -5,7 +5,7 @@ cc_test (
     ],
     deps = [
         "//src:libproject1",
-        "@com_google_googletest//:gtest_main",
+        "@googletest//:gtest_main",
     ],
     data = [
     ],

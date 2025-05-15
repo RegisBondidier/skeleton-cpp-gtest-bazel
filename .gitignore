@@ -1,4 +1,4 @@
 .vscode
 workspace.code-workspace
 bazel-*
-
+MODULE.bazel.lock
