@@ -28,7 +28,7 @@ jobs:
         run: bazel build //...
 
       - name: Run all tests
-        run: bazel test //... --test_output=errors
+        run: bazel test //... --test_output=errors --print_relative_test_log_paths
 
       - name: Understand path in github actions
         run: pwd && ls -lR
