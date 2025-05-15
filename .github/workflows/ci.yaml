@@ -38,4 +38,4 @@ jobs:
         if: always()
         with:
           files: |
-            /home/runner/.bazel/**/testlogs/**/test.xml
+            /home/runner/.bazel/execroot/_main/bazel-out/k8-fastbuild/testlogs/test/project1_test/test.xml
