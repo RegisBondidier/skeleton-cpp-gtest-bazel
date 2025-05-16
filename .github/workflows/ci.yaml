@@ -31,7 +31,7 @@ jobs:
         run: bazel test //... --test_output=errors --print_relative_test_log_paths
 
       - name: Understand path in github actions
-        run: pwd && ls -lR
+        run: pwd && ls -l bazel-testlogs/test/project1_test/
             
       - name: Publish Test Results
         uses: EnricoMi/publish-unit-test-result-action@v2
