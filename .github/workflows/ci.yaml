@@ -32,18 +32,10 @@ jobs:
 
       - name: Understand path in github actions
         run: pwd && ls -lR
-
-      - name: Archive artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: tests-artefacts
-          path: |
-            bazel-*
-          retention-days: 2
             
       - name: Publish Test Results
         uses: EnricoMi/publish-unit-test-result-action@v2
         if: always()
         with:
           files: |
-            /home/runner/.bazel/execroot/_main/bazel-out/k8-fastbuild/testlogs/test/project1_test/test.xml
+            bazel-testlogs/test/project1_test/test.xml
