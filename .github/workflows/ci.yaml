@@ -1,6 +1,10 @@
 # GitHub Actions CI for C++ Bazel + Google Test
 name: CI
 
+permissions:
+  checks: write
+  pull-requests: write
+
 on:
   push:
     branches: [ main ]
@@ -15,10 +19,24 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up Bazel
-        uses: bazelbuild/setup-bazelisk@v3
+        uses: bazel-contrib/setup-bazel@0.14.0
+        with:
+          # Avoid downloading Bazel every time.
+          bazelisk-cache: true
+          # Store build cache per workflow.
+          disk-cache: ${{ github.workflow }}
+          # Share repository cache between workflows.
+          repository-cache: true
 
       - name: Build all targets
         run: bazel build //...
 
       - name: Run all tests
-        run: bazel test //... --test_output=errors
+        run: bazel test //... --test_output=errors --print_relative_test_log_paths
+            
+      - name: Publish Test Results
+        uses: EnricoMi/publish-unit-test-result-action/linux@v2
+        if: always()
+        with:
+          files: |
+            bazel-testlogs/test/**/test.xml
