@@ -1,6 +1,12 @@
 
 ## Description
 
+This is a skeleton repository for a C++ project using Bazel build system and Google Test framework.
+This repository provides a ready to use:
+  - devcontainer to be used with Visual Studio Code for example
+  - CI with minimalistic build and test tasks
+
+Feel free to fork and use it for your own projects.
 
 ## Requirements
 You need to have Bazel (https://bazel.build/) to build this project.
