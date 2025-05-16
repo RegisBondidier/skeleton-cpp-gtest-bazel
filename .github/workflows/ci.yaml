@@ -1,6 +1,10 @@
 # GitHub Actions CI for C++ Bazel + Google Test
 name: CI
 
+permissions:
+  checks: write
+  pull-requests: write
+
 on:
   push:
     branches: [ main ]
